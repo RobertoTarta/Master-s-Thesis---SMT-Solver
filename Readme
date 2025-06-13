@@ -53,8 +53,9 @@ It will then install z3.
 
 To run in, simply run it in the IDE and it will output the solutions to the constraints in the terminal
 
-To change the constraints, you will have to modify them in the code yourself.
-You
+To change the constraints, you will have to modify them in the code yourself, specifically in line 53+.
+You will have the following code:
+You may add, remove or edit the constraints.
 
 # variables
   x = ts.add_variable("x", "Int")
