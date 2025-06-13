@@ -131,7 +131,11 @@ def output(assignments):
 if __name__ == "__main__":
     
     n = 8  # number of holes / n+1 pigeons
-    clauses = list(pigeonhole_principle(n))
+    clauses = list(pigeonhole_principle(n))   #example 1
+   #clauses = [[1, -2], [-1, 2], [2, 3]]      #example 2
+   #clauses = [[1, -2, 3, -4, 5], [-1, 2, -3, 4], [2, -3, 4, -5, 6],[-2, 3, -4, 5], [1, 3, -5, 6, -7], [-1, -3, 5, -6, 7],
+   #[2, 4, -6, 7], [-2, -4, 6, -7], [5, 6, -7, 8], [-5, -6, 7, -8]] #example 3
+    
     vars = set(abs(lit) for clause in clauses for lit in clause)
 
     #show all clauses
