@@ -2,17 +2,44 @@ I still need to finish writing the readme, but each module of the SMT solver is 
 
 DPLL
 
-For the dpll solver there is no need for any installation of packages,
+For the dpll sat solver there is no need for any installation of packages,
 You will require a Python IDE, for example Pycharm to use it
 
 To run in, simply run it in the IDE and it will output the solutions to SAT formulas in the terminal
-If you wish to change the SAT formula, you have to change it yourself in the code, specifically in lines
+If you wish to change the SAT formula, you have to change it yourself in the code, specifically in lines 134+.
+
+You will have the following code:
+clauses = [[1, -2], [-1, 2], [2, 3]]
+
+if you wish to change the clauses, just overwrite what comes after "clauses="
+
+the clauses are written in the format:
+[[1, -2], [-1, 2], [2, 3]]
+which can be translated into:
+[[x1, -x2], [-x1, x2], [x2, x3]]
+or
+[[a, -b], [-a, b], [b, c]]
 
 
 
 CDCL
 
+For the cdcl sat solver there is no need for any installation of packages,
+You will require a Python IDE, for example Pycharm to use it
 
+To run in, simply run it in the IDE and it will output the solutions to SAT formulas in the terminal
+
+You may choose to change the branching algorithm.
+You have the following branching algorithms:
+"first": chooses the first literal in order
+"frequent": chooses the most frequent literal first
+"random": chooses a random literal
+"vsids": chooses a literal based on a score that lowers after every loop but rises whenever a literal creates a conflict
+
+to change the used branching algorithm, simply change the string after "branching_strategy=" to any of the above
+
+
+If you wish to change the SAT formula, you have to change it yourself in the code, specifically in lines 134+.
 
 
 
