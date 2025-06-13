@@ -20,8 +20,6 @@ which can be translated into:
 or
 [[a, -b], [-a, b], [b, c]]
 
-
-
 CDCL
 
 For the cdcl sat solver there is no need for any installation of packages,
@@ -39,13 +37,33 @@ You have the following branching algorithms:
 to change the used branching algorithm, simply change the string after "branching_strategy=" to any of the above
 
 
-If you wish to change the SAT formula, you have to change it yourself in the code, specifically in lines 134+.
+If you wish to change the SAT formula, you have to change it yourself in the code, specifically in lines 145+.
 
+You will have the following code:
+clauses = [[1, -2], [-1, 2], [2, 3]]
 
+if you wish to change the clauses, just overwrite what comes after "clauses="
 
-Theory 
+Theory Solver (Z3)
 
+The theory solver will require you to installa package as it uses resources from the z3 solver.
+You will only have to install it once. 
+To install it, open the IDE's terminal and type: "!pip install z3-solver"
+It will then install z3.
 
+To run in, simply run it in the IDE and it will output the solutions to the constraints in the terminal
+
+To change the constraints, you will have to modify them in the code yourself.
+You
+
+# variables
+  x = ts.add_variable("x", "Int")
+  y = ts.add_variable("y", "Int")
+
+# constraints
+  ts.add_constraint(x + y > 0)
+  ts.add_constraint(x - y < 5)
+  ts.add_constraint(x >= 0)
 
 
 SMT
