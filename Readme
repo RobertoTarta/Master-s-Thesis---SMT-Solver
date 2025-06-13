@@ -2,6 +2,11 @@ I still need to finish writing the readme, but each module of the SMT solver is 
 
 DPLL
 
+For the dpll solver there is no need for any installation of packages,
+You will require a Python IDE, for example Pycharm to use it
+
+To run in, simply run it in the IDE and it will output the solutions to SAT formulas in the terminal
+If you wish to change the SAT formula, you have to change it yourself in the code, specifically in lines
 
 
 
