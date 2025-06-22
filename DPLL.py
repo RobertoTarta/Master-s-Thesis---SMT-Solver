@@ -56,7 +56,7 @@ def propagate_units(clauses):
 
     return assignments, clauses
 
-# Perform pure literal elimination
+# perform pure literal elimination
 def pure_elim(clauses):
     assignments = {}
     literal_count = defaultdict(int)
@@ -98,7 +98,7 @@ def dpll(clauses, vars):
     if not clauses:
         return assignments  # all clauses satisfied
 
-    # Step 3: Choose a variable to branch on
+    # choose a variable to branch on
     literal_count = defaultdict(int)
     for clause in clauses:
         for literal in clause:
