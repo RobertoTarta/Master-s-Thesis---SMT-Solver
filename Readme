@@ -69,3 +69,14 @@ You may add, remove or edit the constraints.
 
 
 SMT
+
+The smt solver will require you to install a package as it makes use of the z3 theory solver.
+You will require a Python IDE, for example Pycharm to use it
+To install it, open the IDE's terminal and type: "!pip install z3-solver"
+It will then install z3.
+
+In the same directory as the file, create a folder with the name "smt_file" and you may put inside smt_lib files inside. You can put files from the benchmarks link above.
+The smt solver will read all files inside the folder and will write the outputs inside a .txt file, it also outputs into terminal.
+The .txt file will be overwritten after each run.
+
+Do take note, the smt solver is not coded to handle "let" and "ite" commands, so any files with those commands will result in an error.
